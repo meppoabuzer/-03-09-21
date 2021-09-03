@@ -1,7 +1,10 @@
 # -03-09-21
 1.Скачиваем opencv с сайта https://opencv.org/
-2.Запскаем Visual Studio
+
+2.Запускаем Visual Studio/
+
 3.Создаём пустой проект C++
+
 4.Настраиваем opencv внутри проекта
 ![image](https://user-images.githubusercontent.com/90040829/131997515-72147b05-024b-46d0-b26f-ce870fb61fa7.png)
 ![image](https://user-images.githubusercontent.com/90040829/131997615-ff7fa59a-171e-4096-bcb7-780a72b154b3.png)

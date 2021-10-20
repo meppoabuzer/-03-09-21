@@ -26,7 +26,7 @@ namespace calculate
                 if (oper == '/')
             {
                 total = a / b;
-                Console.WriteLine("Совсем дурак?");
+                Console.WriteLine("а");
             }
 
                         else if (oper == '+')

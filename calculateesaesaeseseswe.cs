@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
-namespace calculate
+namespace ConsoleApp3
 {
-     public class Program
+    public class Program
     {
-        public void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             double a;
@@ -20,44 +20,85 @@ namespace calculate
 
             Console.WriteLine("Введите второе число:");
             b = Convert.ToDouble(Console.ReadLine());
-           
+
+            calc(a, b, oper);
 
 
-                if (oper == '/')
+
+        }
+
+        public static double calc(double a, double b, char oper)
+        {
+            if (oper == '/')
             {
-                total = a / b;
-                Console.WriteLine("а");
+                return a / b;
+                                Console.WriteLine("а");
+
             }
 
-                        else if (oper == '+')
-                        {
-                            total = a + b;
-                            Console.WriteLine("Cумма " + a + " и " + b + " равна " + total);
-                        }
+            else if (oper == '+')
+            {
+                
+                double total = a + b;
+                Console.WriteLine("Cумма " + a + " и " + b + " равна " + total);
+                return a + b;
+            }
 
-                        else if (oper == '-')
-                        {
-                            total = a - b;
-                            Console.WriteLine("Разность " + a + " и " + b + " равна " + total);
-                        }
+            else if (oper == '-')
+            {
+                
+                double total = a - b;
+                Console.WriteLine("Разность " + a + " и " + b + " равна " + total);
+                return a - b;
+            }
 
-                        else if (oper == '*')
-                        {
-                            total = a * b;
-                            Console.WriteLine("Умножение " + a + " на " + b + " равно " + total);
-                        }
+            else if (oper == '*')
+            {
+                
+                double total = a * b;
+                Console.WriteLine("Умножение " + a + " на " + b + " равно " + total);
+                return a * b;
+            }
 
-                        else if (oper == '/')
-                        {
-                            total = a / b;
-                            Console.WriteLine("Деление " + a + " на " + b + " равно " + total);
-                            
-                        }
-                        else
-                        {
-                            Console.WriteLine("Неизвестный оператор.");
-                        }
-            
+            else if (oper == '/')
+            {
+                
+                double total = a / b;
+                Console.WriteLine("Деление " + a + " на " + b + " равно " + total);
+                return a / b;
+
+            }
+            else
+            {
+                Console.WriteLine("Неизвестный оператор.");
+                return 1;
+            }
+        }
+    }
+}
+
+ПКМ создние модульного теста
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ConsoleApp3;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp3.Tests
+{
+    [TestClass()]
+    public class ProgramTests
+    {
+        [TestMethod()]
+        public void MainTest()
+        {
+            double a = 5;
+            double b = 5;
+            char oper = '+';
+            double res = 10;
+            double act = Program.calc(a, b, oper);
+            Assert.AreEqual(res, act);
+
         }
     }
 }
